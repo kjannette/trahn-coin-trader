@@ -52,13 +52,7 @@ export function Dashboard() {
     return (
         <div className="container">
             <header>
-                <pre className="ascii-logo">{`
-   ████████╗██████╗  █████╗ ██╗  ██╗███╗   ██╗
-   ╚══██╔══╝██╔══██╗██╔══██╗██║  ██║████╗  ██║
-      ██║   ██████╔╝███████║███████║██╔██╗ ██║
-      ██║   ██╔══██╗██╔══██║██╔══██║██║╚██╗██║
-      ██║   ██║  ██║██║  ██║██║  ██║██║ ╚████║
-      ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝`}</pre>
+                <h1 className="logo">TRAHN</h1>
                 <button className="logout-btn" onClick={logout}>Logout</button>
             </header>
             

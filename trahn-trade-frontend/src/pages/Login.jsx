@@ -29,13 +29,7 @@ export function Login() {
     return (
         <div className="auth-container">
             <div className="auth-card">
-                <pre className="ascii-logo">{`
-   ████████╗██████╗  █████╗ ██╗  ██╗███╗   ██╗
-   ╚══██╔══╝██╔══██╗██╔══██╗██║  ██║████╗  ██║
-      ██║   ██████╔╝███████║███████║██╔██╗ ██║
-      ██║   ██╔══██╗██╔══██║██╔══██║██║╚██╗██║
-      ██║   ██║  ██║██║  ██║██║  ██║██║ ╚████║
-      ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝`}</pre>
+                <h1 className="logo">TRAHN</h1>
                 
                 <h2>Welcome Back</h2>
                 

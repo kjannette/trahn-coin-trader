@@ -6,6 +6,7 @@
 *.key
 *.env
 *secrets.js
+secrets.js
 trahn-trade-frontend/src/auth/secrets.js*
 
 # ============================================
