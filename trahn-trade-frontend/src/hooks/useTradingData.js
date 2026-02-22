@@ -1,15 +1,7 @@
-/**
- * Custom hooks for trading data management
- * Handles carousel navigation and historical day loading
- */
-
 import { useQuery } from '@tanstack/react-query';
 import { useTradingData } from '../contexts/TradingDataContext';
 import { tradingApi } from '../api/tradingApi';
 
-/**
- * Hook for loading historical day data (lazy load)
- */
 export function useHistoricalDay(date, enabled = false) {
     return useQuery({
         queryKey: ['historicalDay', date],
@@ -26,9 +18,6 @@ export function useHistoricalDay(date, enabled = false) {
     });
 }
 
-/**
- * Hook for carousel navigation
- */
 export function useCarousel() {
     const { state, dispatch } = useTradingData();
     
@@ -38,12 +27,9 @@ export function useCarousel() {
         }
         
         if (index === state.availableDays.length - 1) {
-            // Navigate to live (current) day
             dispatch({ type: 'SWITCH_TO_LIVE' });
         } else {
-            // Load historical day
             const date = state.availableDays[index];
-            // Historical data will be loaded via useHistoricalDay in Dashboard
             dispatch({ 
                 type: 'LOAD_HISTORICAL_DAY', 
                 prices: [], 

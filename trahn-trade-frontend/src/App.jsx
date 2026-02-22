@@ -8,7 +8,6 @@ import { Login } from './pages/Login';
 import { Signup } from './pages/Signup';
 import './App.css';
 
-// Create React Query client
 const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
@@ -20,7 +19,6 @@ const queryClient = new QueryClient({
     },
 });
 
-// Redirect authenticated users away from auth pages
 function PublicRoute({ children }) {
     const { currentUser } = useAuth();
     

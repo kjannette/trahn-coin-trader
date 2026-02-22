@@ -52,7 +52,7 @@ header {
   color: var(--text-primary);
   text-align: center;
   letter-spacing: 0.25em;
-  text-shadow: 0 10 30px rgba(88, 166, 255, 0.3);
+  text-shadow: 4px 12px 12px rgb(173, 1, 124);
 }
 
 .subtitle {
@@ -105,15 +105,16 @@ header {
 .date-label {
   font-family: 'Ac437_Rainbow100_re_132';
   font-weight: 600;
-  font-size: 1.45rem;
+  font-size: 1.65rem;
   font-weight: 600;
+  letter-spacing: 2px;
   color: var(--text-primary);
 }
 
 .date-status {
   display: block;
   font-family: 'Ac437_Rainbow100_re_132', monospace;
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: var(--text-secondary);
   margin-top: 0.25rem;
 }

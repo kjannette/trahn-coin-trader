@@ -23,7 +23,6 @@ export function Chart({ prices, trades }) {
   const [tooltip, setTooltip] = useState(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
-  // Handle resize
   useEffect(() => {
     const updateDimensions = () => {
       if (containerRef.current) {
@@ -53,7 +52,6 @@ export function Chart({ prices, trades }) {
     const chartWidth = width - PADDING.left - PADDING.right;
     const chartHeight = height - PADDING.top - PADDING.bottom;
 
-    // Clear
     ctx.clearRect(0, 0, width, height);
 
     if (!prices || prices.length === 0) {
@@ -64,7 +62,6 @@ export function Chart({ prices, trades }) {
       return;
     }
 
-    // Calculate bounds
     const priceValues = prices.map(d => d.p || d.price);
     const times = prices.map(d => d.t || d.timestamp);
 
@@ -79,7 +76,6 @@ export function Chart({ prices, trades }) {
 
     const baselinePrice = priceValues[0];
 
-    // Coordinate converters
     const priceToY = (price) => {
       const range = maxPrice - minPrice;
       const normalized = (price - minPrice) / range;
@@ -92,7 +88,6 @@ export function Chart({ prices, trades }) {
       return PADDING.left + chartWidth * normalized;
     };
 
-    // Draw grid
     ctx.strokeStyle = COLORS.grid;
     ctx.lineWidth = 1;
 
@@ -191,13 +186,11 @@ export function Chart({ prices, trades }) {
       ctx.fillStyle = color + '33';
       ctx.fill();
 
-      // Outer
       ctx.beginPath();
       ctx.arc(x, y, radius, 0, Math.PI * 2);
       ctx.fillStyle = color;
       ctx.fill();
 
-      // Inner
       ctx.beginPath();
       ctx.arc(x, y, radius - 3, 0, Math.PI * 2);
       ctx.fillStyle = COLORS.bg;

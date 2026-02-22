@@ -1,16 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { addToWaitlist } from '../auth/firebase';
-//a comment
 
 export function Signup() {
     const [email, setEmail] = useState('');
     const [loading, setLoading] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const [error, setError] = useState('');
-//
-//
-// 
+
     async function handleSubmit(e) {
         e.preventDefault();
         
@@ -33,8 +30,7 @@ export function Signup() {
         }
         setLoading(false);
     }
-// some spacing 
-//more
+
     return (
         <div className="auth-container">
             <div className="auth-card">

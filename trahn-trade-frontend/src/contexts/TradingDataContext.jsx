@@ -62,7 +62,6 @@ function reducer(state, action) {
 export function TradingDataProvider({ children }) {
     const [state, dispatch] = useReducer(reducer, initialState);
     
-    // React Query: Poll current day data every 1 minute
     const { data: currentData, error, isLoading } = useQuery({
         queryKey: ['currentDay'],
         queryFn: async () => {
@@ -87,7 +86,6 @@ export function TradingDataProvider({ children }) {
         retryDelay: 2000,
     });
     
-    // Update context when live data changes
     useEffect(() => {
         if (currentData) {
             dispatch({ 
@@ -97,7 +95,6 @@ export function TradingDataProvider({ children }) {
         }
     }, [currentData]);
     
-    // Handle connection status
     useEffect(() => {
         if (error) {
             dispatch({ type: 'SET_CONNECTION_STATUS', status: 'error' });

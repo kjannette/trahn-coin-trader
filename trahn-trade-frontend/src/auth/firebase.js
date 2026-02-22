@@ -7,7 +7,6 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 
-// Add email to waitlist collection
 export async function addToWaitlist(email) {
     try {
         await addDoc(collection(db, 'trahn-trade-signups'), {
