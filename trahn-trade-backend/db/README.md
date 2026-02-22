@@ -38,7 +38,7 @@ CREATE DATABASE trahn_grid_trader;
 \q
 
 # Run schema
-psql -U postgres -d trahn_grid_trader -f db/schema.sql
+psql -U kjannette -d trahn_grid_trader -f db/schema.sql
 ```
 
 ### 3. Configure .env
