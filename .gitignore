@@ -1,0 +1,91 @@
+# ============================================
+# Environment & Secrets
+# ============================================
+!.env.example
+*.pem
+*.key
+*.env
+*secrets.js
+trahn-trade-frontend/src/auth/secrets.js*
+
+# ============================================
+# Dependencies
+# ============================================
+node_modules/
+package-lock.json
+yarn.lock
+.pnp.*
+.yarn/*
+
+# ============================================
+# Bot State Files
+# ============================================
+*.state.json
+
+# ============================================
+# Logs
+# ============================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ============================================
+# Build & Output
+# ============================================
+dist/
+dist-ssr/
+build/
+out/
+*.tsbuildinfo
+*.local
+
+# ============================================
+# Test & Coverage
+# ============================================
+coverage/
+.nyc_output/
+*.lcov
+
+# ============================================
+# IDE & Editors
+# ============================================
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*.swo
+*.sw?
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sublime-workspace
+*.sublime-project
+.project
+.classpath
+.settings/
+
+# ============================================
+# OS Files
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ============================================
+# Misc
+# ============================================
+*.bak
+*.tmp
+*.temp
+.cache/
+.parcel-cache/
