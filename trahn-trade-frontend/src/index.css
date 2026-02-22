@@ -1,1 +1,34 @@
-/* Reset handled in App.css */
+@font-face {
+  font-family: 'Ac437_Rainbow100_re_1323';
+  src: local('./fonts/Mx437_Compaq_Port3.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ac437_Rainbow100_re_1323';
+  src: local('./fonts/Mx437_Compaq_Port3.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Px437_AMI_EGA_8x8';
+  src: local('Px437_AMI_EGA_8x8'), url(./fonts/Px437_AMI_EGA_8x8.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ac437_Rainbow100_re_132';
+  src: local('Ac437_Rainbow100_re_132'), url(./fonts/Ac437_Rainbow100_re_132.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ac437_Rainbow100_re_132';
+  src: local('Ac437_Rainbow100_re_132'), url(./fonts/Ac437_Rainbow100_re_132.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

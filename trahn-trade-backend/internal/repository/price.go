@@ -40,7 +40,7 @@ func (r *PriceRepo) GetByDay(ctx context.Context, tradingDay string) ([]models.P
 
 func (r *PriceRepo) GetAvailableDays(ctx context.Context) ([]string, error) {
 	rows, err := r.pool.Query(ctx,
-		`SELECT DISTINCT trading_day FROM price_history ORDER BY trading_day DESC LIMIT 30`,
+		`SELECT DISTINCT trading_day FROM price_history ORDER BY trading_day ASC LIMIT 30`,
 	)
 	if err != nil {
 		return nil, err

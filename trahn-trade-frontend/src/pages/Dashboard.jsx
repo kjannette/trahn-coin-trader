@@ -12,11 +12,9 @@ export function Dashboard() {
     const { state, dispatch } = useTradingData();
     const carousel = useCarousel();
     
-    // Load historical day data when viewing past days
     const historicalDate = !state.isLive ? state.availableDays[state.currentDayIndex] : null;
     const { data: historicalData } = useHistoricalDay(historicalDate, !state.isLive);
     
-    // Update context with historical data when loaded
     useEffect(() => {
         if (historicalData && !state.isLive) {
             dispatch({
@@ -52,13 +50,7 @@ export function Dashboard() {
     return (
         <div className="container">
             <header>
-                <pre className="ascii-logo">{`
-   ████████╗██████╗  █████╗ ██╗  ██╗███╗   ██╗
-   ╚══██╔══╝██╔══██╗██╔══██╗██║  ██║████╗  ██║
-      ██║   ██████╔╝███████║███████║██╔██╗ ██║
-      ██║   ██╔══██╗██╔══██║██╔══██║██║╚██╗██║
-      ██║   ██║  ██║██║  ██║██║  ██║██║ ╚████║
-      ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝`}</pre>
+                <h1 className="logo">TRAHN</h1>
                 <button className="logout-btn" onClick={logout}>Logout</button>
             </header>
             
